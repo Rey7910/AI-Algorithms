@@ -58,7 +58,7 @@ def DepthFirstSearch(graph,start,goal):
 
             
             if(graph[state][j]==1 and j not in visited_nodes):
-                # those neighbors who where no visited before are added to the visited_nodes set and are pushed into the stack
+                # those neighbors who were no visited before are added to the visited_nodes set and are pushed into the stack
                 visited_nodes.add(j)
                 stack.append(j)
         
