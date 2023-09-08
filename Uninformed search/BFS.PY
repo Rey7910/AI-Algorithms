@@ -59,7 +59,7 @@ def BreadthFirstSearch(graph,start,goal):
 
             
             if(graph[state][j]==1 and j not in visited_nodes):
-                # those neighbors who were no visited before are added to the visited_nodes set and are pushed into the stack
+                # those neighbors who were no visited before are added to the visited_nodes set and are enqueued into the queue
                 visited_nodes.add(j)
                 queue.append(j)
         
