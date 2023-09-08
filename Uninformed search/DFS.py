@@ -2,7 +2,7 @@
 '''
 Travel to Romania - Adjacency matrix
 
-	arad	zerand	oradea	sibiu	fagaras	 timisora  lugoj  mehadia  dobreta  craiova pitesti rimmi bucharest  
+	    arad	zerand	oradea	sibiu	fagaras	 timisora  lugoj  mehadia  dobreta  craiova pitesti rimmi bucharest  
 arad	  0       1       0       1       0         1         0     0         0       0         0      0     0
 zerand	  1       0       1       0       0         0         0     0         0       0         0      0     0
 oradea	  0       1       0       1       0         0         0     0         0       0         0      0     0
@@ -23,7 +23,7 @@ bucharest 0       0       0       0       1         0         0     0         0 
 graph=[
     [0,1,0,1,0,1,0,0,0,0,0,0,0],
     [1,0,1,0,0,0,0,0,0,0,0,0,0],
-    [0,1,0,1,0,1,0,0,0,0,0,0,0],
+    [0,1,0,1,0,0,0,0,0,0,0,0,0],
     [1,0,1,0,1,0,0,0,0,0,0,1,0],
     [0,0,0,1,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,1,0,0,0,0,0,0],
@@ -45,6 +45,7 @@ def DepthFirstSearch(graph,start,goal):
     way=[]
     state=start
     stack.append(state)
+    visited_nodes.add(state)
     while state!=goal:
         print(stack)
         # the last node stacked is the one who is going to be branched
@@ -53,6 +54,7 @@ def DepthFirstSearch(graph,start,goal):
         way.append(state)
 
         # Look for the neighbors of the current state
+        print(identify_city(state))
         for j in range(len(graph[state])):
             #print(graph[state][j],end=" ")
 
